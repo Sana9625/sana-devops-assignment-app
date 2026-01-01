@@ -118,11 +118,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Print pipeline variables
-        run: |
-          echo "Application Name: $APP_NAME"
-          echo "Environment: $ENVIRONMENT"
+  show-secrets:
+    name: secrets
+    runs-on: ubuntu-latest
 
+    steps:
       - name: Print secrets (masked in logs)
         env:
           DB_USERNAME: ${{ secrets.DB_USERNAME }}
@@ -130,7 +130,16 @@ jobs:
         run: |
           echo "Database Username: $DB_USERNAME"
           echo "Database Password: $DB_PASSWORD"
-          
-          
 
+  show-variables:
+    name: variables
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Print variables (masked in logs)
+        env:
+          DB_USERNAME: ${{ secrets vars.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets vars.DB_PASSWORD }}
+        run: |
+          echo "Database Username: $DB_USERNAME"
+          echo "Database Password: $DB_PASSWORD"
