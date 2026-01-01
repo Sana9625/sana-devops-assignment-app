@@ -8,9 +8,9 @@
 		<version>4.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.github.Sana9625</groupId>
 	<artifactId>sample-java-assignment-app</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.1.1</version>
 	<name>sample-java-assignment-app</name>
 	<description>Java Assignment projects to Learn</description>
 	<url/>
