@@ -138,8 +138,8 @@ jobs:
     steps:
       - name: Print variables (masked in logs)
         env:
-          DB_USERNAME: ${{ secrets vars.DB_USERNAME }}
-          DB_PASSWORD: ${{ secrets vars.DB_PASSWORD }}
+          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
           echo "Database Username: $DB_USERNAME"
           echo "Database Password: $DB_PASSWORD"
