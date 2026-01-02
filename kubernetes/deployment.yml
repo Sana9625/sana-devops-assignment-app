@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-java-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-java-app
+  template:
+    metadata:
+      labels:
+        app: sample-java-app
+    spec:
+      containers:
+        - name: app
+          image: sample-java-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
